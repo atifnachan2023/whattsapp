@@ -11,6 +11,7 @@ import com.whattsapp.prototype.repository.MessageRepo;
 import com.whattsapp.prototype.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
 
@@ -58,5 +59,13 @@ public class MessegeServiceImpl implements MessageService {
         emojiRepo.save(emoji1);
 
         return emoji;
+    }
+
+    @Override
+    public String save(MultipartFile multipartFile, Long accountId) {
+
+        return null;
+
+
     }
 }
