@@ -1,11 +1,13 @@
 package com.whattsapp.prototype.entites;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -31,7 +33,6 @@ public class MessageInfo {
     private Chatroom chatroom;
 
 
-    private String content;
 
     private LocalDateTime timeStamp;
 
