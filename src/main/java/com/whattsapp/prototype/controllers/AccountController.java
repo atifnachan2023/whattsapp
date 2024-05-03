@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -27,7 +28,7 @@ public class AccountController {
 
      */
     @PostMapping("/add")
-    public ResponseEntity<AccountProfile> createAccount(@RequestBody AccountProfile profile){
+    public ResponseEntity<AccountProfile> createAccount( @Valid @RequestBody AccountProfile profile){
 
           AccountProfile newProfile=accountService.createAccount(profile);
 
