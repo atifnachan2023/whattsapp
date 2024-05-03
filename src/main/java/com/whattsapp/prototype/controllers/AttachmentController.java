@@ -59,6 +59,12 @@ UTILITY METHOD
 
 
         } else if (file.getContentType().equals("video/mp4")) {
+            InputStream ios =file.getInputStream();
+            byte data [] =new byte[ios.available()];
+            ios.read(data);
+
+            //write
+            FileOutputStream fileOutputStream=new FileOutputStream(VIDEO_URL+"\\"+file.getOriginalFilename());
 
         }
 
