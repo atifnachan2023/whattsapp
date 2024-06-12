@@ -22,7 +22,7 @@ public class MessageController {
 
      */
     @GetMapping( "/")
-    public String message(){
+    public String merge(){
 
         return "Hi springboot";
     }
