@@ -21,6 +21,11 @@ public class MessageController {
 
 
      */
+    @GetMapping( "/")
+    public String message(){
+
+        return "Hi springboot";
+    }
 
     @PostMapping("/{accountId}/{chatroomId}")
     public ResponseEntity<MessageInfo> sendMessage(@RequestBody MessageInfo messageInfo , @PathVariable Long accountId , @PathVariable Long chatroomId){
